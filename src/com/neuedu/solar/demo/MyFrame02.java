@@ -1,7 +1,7 @@
 package com.neuedu.solar.demo;
 
 import com.neuedu.solar.common.CommonFrame;
-import com.neuedu.solar.common.FramUtil;
+import com.neuedu.solar.common.FrameUtil;
 
 import java.awt.*;
 
@@ -11,7 +11,7 @@ public class MyFrame02 extends CommonFrame {
     int y=400;
     int speed=10;
     public void paint(Graphics g){
-        g.drawImage(FramUtil.getImage("Earth.png"),x,y,80,80,null);
+        g.drawImage(FrameUtil.getImage("com/neuedu/solar/img/Earth.jpg"),x,y,80,80,null);
         x+=speed;
     }
 

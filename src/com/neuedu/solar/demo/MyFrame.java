@@ -46,6 +46,6 @@ public class MyFrame extends Frame {
         int nPoints = 8;
         g.drawPolygon(xPoints,yPoints,nPoints);
         //画图片
-//            g.drawImage(FramUtil.getImage("com/neuedu/solar/img/hai.jpg"),100,100,null);
+//            g.drawImage(FramUtil.getImage("com/neuedu/solar/img/hai.png"),100,100,null);
     }
 }

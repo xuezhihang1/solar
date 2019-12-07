@@ -6,13 +6,11 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-import static com.neuedu.solar.constant.Constant.FRAME_HEIGHT;
-import static com.neuedu.solar.constant.Constant.FRAME_WIDTH;
 
 public class CommonFrame extends Frame {
     public void loadFrame(String title) {
         //1.设置大小
-        this.setSize(FRAME_WIDTH , FRAME_HEIGHT);
+        this.setSize(Constant.FRAME_WIDTH , Constant.FRAME_HEIGHT);
         //2.设置位置
         //水平垂直居中
         this.setLocationRelativeTo(null);
@@ -30,7 +28,7 @@ public class CommonFrame extends Frame {
         this.setResizable(false);
         //6.设置标题
         this.setTitle(title);
-        //7.
+        //7.启动重写的多线程
         new MyThread().start();
     }
     /**
@@ -56,12 +54,12 @@ public class CommonFrame extends Frame {
     @Override
     public void update(Graphics g) {
         if (backImg == null) {
-            backImg = createImage(FRAME_WIDTH, FRAME_HEIGHT);
+            backImg = createImage(Constant.FRAME_WIDTH, Constant.FRAME_HEIGHT);
         }
         Graphics backg = backImg.getGraphics();
         Color c = backg.getColor();
-        backg.setColor(Color.BLACK);
-        backg.fillRect(0, 0, FRAME_WIDTH, FRAME_HEIGHT);
+        backg.setColor(Color.white);
+        backg.fillRect(0, 0, Constant.FRAME_WIDTH, Constant.FRAME_HEIGHT);
         backg.setColor(c);
         paint(backg);
         g.drawImage(backImg, 0, 0, null);
